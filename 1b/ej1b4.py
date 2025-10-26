@@ -65,9 +65,24 @@ Exemple:
 import numpy as np
 
 def results(list_numbers):
-    # Write here your code
-    pass
+    
+    if len(list_numbers) == 0:
+        
+        
+        raise ValueError("La lista está vacía")
+    
+    promedio = np.mean(list_numbers)
+
+    desv_estandard = np.std(list_numbers)
+
+    print("Average: ",round(promedio,2)," y  Standard deviation: ",round(desv_estandard,2))
+
+    return round(promedio,2),round(desv_estandard,2)
+
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# results([1, 2, 10, -5, 0, 9.55, 74.825, 55, 8, 42])
+
+results([1, 2, 10, -5, 0, 9.55, 74.825, 55, 8, 42])
+
+#results([])      # <-- Descomentar results([]) para pruebar con lista vacía. Si no con pytest

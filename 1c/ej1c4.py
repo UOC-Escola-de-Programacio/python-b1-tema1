@@ -41,14 +41,34 @@ Exemple:
 
 
 def is_palindrome(word):
-    # Write here your code
-    pass
+
+    
+    if len(word) == 1 or len(word) == 0:              # Si llegamos a tener una palabra de 1 letra (en palabras impares) o 0 (palabras pares) es que es palíndromo, True
+        
+        return True
+
+    elif word[0] == word[-1]:                         # Si la primera y última letra son iguales, llamamos a función con la palabra sin esas letras
+    
+        return is_palindrome(word[1:-1])
+
+    elif word[0] != word[-1]:                         # Aquí ya no sería palíndomo porque no son iguales la primera y última letra que estamos analizando, por lo tanto False
+
+        return False
+    
+    
+    
+    
+
+
+    
+    
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# word = "level"
-# print(f"Is '{word}' word palindrome?", is_palindrome(word))
+word = "level"
+print(f"Is '{word}' word palindrome?", is_palindrome(word))
 #
-# word = "juan"
-# print(f"Is '{word}' word palindrome?", is_palindrome(word))
+word = "juan"
+print(f"Is '{word}' word palindrome?", is_palindrome(word))

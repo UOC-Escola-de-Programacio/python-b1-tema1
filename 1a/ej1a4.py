@@ -34,9 +34,28 @@ Exemple:
 '''
 
 def count_vowels(text_chain:str):
-    # Write here your code
-    pass
+    
+    if type(text_chain) != str:
+
+        raise ValueError(" El valor introducido debe ser de tipo string")
+    
+    vocal_acentuada = ["á","à","é","è","í","ì","ò","ó","ú","ù"]
+    vocales = ["a","e","i","o","u"]
+
+    suma_vocales =0
+    
+    for i in text_chain:
+
+        if i.lower() in vocal_acentuada:
+
+            raise ValueError("Uno o varios carácteres estan acentuados")
+        
+        if i.lower() in vocales:
+
+            suma_vocales +=1
+
+    return suma_vocales
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(count_vowels("Hello world, this is an example."))
+print(count_vowels("Hello world, this is an example."))

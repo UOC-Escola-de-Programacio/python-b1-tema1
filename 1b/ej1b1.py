@@ -35,9 +35,18 @@ Exemple:
 """
 
 def obtain_max(list_numbers):
-    # Write here your code
-    pass
+    
+    for i in list_numbers:
+
+        if type(i) != int:
+ 
+            
+            raise ValueError("Los valores deben ser de tipo entero")
+        
+    
+        
+    return max(list_numbers)
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(obtain_max([1, 45, 87, 21, 0, 23, 28]))
+print(obtain_max([2,40,4]))
