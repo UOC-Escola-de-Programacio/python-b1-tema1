@@ -36,11 +36,20 @@ Exemple
 
 
 def invert_list(lst):
-    # Write here your code
-    pass
+    
+    if len(lst) <=1:
+
+        return lst                                      # En este punto, lst únicamente contiene el primer valor de la lista original, y se empieza a realizar los returns anteriores
+
+    return [lst[-1]] + invert_list(lst[:-1])            # Al sumar la función, la función principal se queda a la espera de recibir el resultado. Así hasta que len(list) = 1. 
+
+
+   
+    
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# lst = [1, 20, 3, 40, 5]
-#print(invert_list(lst))
+lst = [1, 20, 3, 40, 5]
+print(invert_list(lst))

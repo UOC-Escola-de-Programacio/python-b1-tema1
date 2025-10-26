@@ -12,3 +12,5 @@ def test_is_palindrome():
     assert is_palindrome("a") == True, "is_palindrome does not return the correct value for input a. It should be True"
     assert is_palindrome("ab") == False, "is_palindrome does not return the correct value for input ab. It should be False"
     assert is_palindrome("radar") == True, "is_palindrome does not return the correct value for input radar. It should be True"
+    assert is_palindrome("anna") == True, "is_palindrome does not return the correct value for input radar. It should be True"
+    assert is_palindrome("rana") == False, "is_palindrome does not return the correct value for input radar. It should be False"

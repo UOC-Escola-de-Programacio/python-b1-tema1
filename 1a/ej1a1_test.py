@@ -1,6 +1,7 @@
 from ej1a1 import fibonacci
 import pytest
 
+
 def test_fibonacci_():
     assert fibonacci(0) == 0, "fibonacci does not return the correct value for input 0. It should be 0"
     assert fibonacci(1) == 1, "fibonacci does not return the correct value for input 1. It should be 1"
@@ -9,7 +10,7 @@ def test_fibonacci_():
 
 def test_fibonacci_invalid_input():
     with pytest.raises(ValueError):
-        fibonacci(-1), "fibonacci does not return the correct value for input -1. It should raise an error"
+        fibonacci(-1), "no detecta error en valor negativo."
     with pytest.raises(ValueError):
         fibonacci(1.5), "fibonacci does not return the correct value for input 1.5. It should raise an error"
     with pytest.raises(ValueError):

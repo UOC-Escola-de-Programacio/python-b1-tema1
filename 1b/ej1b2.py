@@ -66,9 +66,15 @@ Exemple:
 import math
 
 def calculate_angle(angle):
-    # Write here your code
-    pass
+
+    radianes = math.radians(angle)
+
+    seno = math.sin(radianes)
+    
+    return round(seno, 2)
+
+
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(calculate_angle(270))
+print(calculate_angle(270))

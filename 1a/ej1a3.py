@@ -31,10 +31,46 @@ Exemple:
 
 '''
 
-def invert_text(text_chain:str):
-    # Write here your code
-    pass
+
+def invert_text_long(text_chain:str):    # VERSION LARGA 
+    
+    if type(text_chain) != str:
+
+        raise ValueError("El valor introducido debe ser de tipo 'string'")
+
+    lista =[]                      # Creamos lista con los elementos de text_chain para luego iterarla a la inversa
+    for i in text_chain:
+        lista.append(i)
+    
+    inv_palabra = ""
+    for index, i in enumerate(lista,1):
+
+        inv_palabra += lista[-index]
+        
+        
+       
+    return inv_palabra
+   
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(invert_text("Hello world!"))
+print(invert_text_long("Hello World!"))
+
+
+
+
+def invert_text_short(text_chain:str):        #VERSION CORTA
+
+    if type(text_chain) != str:
+
+        raise ValueError("El valor introducido debe ser de tipo 'string'")
+    
+
+    return text_chain[::-1]
+
+print(invert_text_short("Hello World!"))
+
+
+
+
+

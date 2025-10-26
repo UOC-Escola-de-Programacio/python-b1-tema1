@@ -40,9 +40,20 @@ Exemple:
 '''
 
 def fibonacci(fibonacci_number):
-    # Write here your code
-    pass
+    
+    if type(fibonacci_number) is not int:   
+        raise ValueError("El valor debe ser un número entero.")
+    
+    if fibonacci_number < 0:
+        raise ValueError("El valor debe ser un número entero positivo mayor a 0.")
+        
+    
+    a, b = 0, 1
+    for i in range(fibonacci_number): 
+        a, b = b, a + b 
+
+    return a
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(fibonacci(10))
+print(fibonacci(6))
