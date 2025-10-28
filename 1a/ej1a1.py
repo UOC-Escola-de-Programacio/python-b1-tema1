@@ -40,8 +40,54 @@ Exemple:
 '''
 
 def fibonacci(fibonacci_number):
-    # Write here your code
-    pass
+    '''
+        if fibonacci_number == 0:
+            return 1
+
+        return fibonacci_number * fibonacci(fibonacci_number - 1)
+    '''
+
+    if isinstance(fibonacci_number, str):
+        raise ValueError("El número de fibonacci ha d'ésser numèric: " + str(fibonacci_number))
+    if isinstance(fibonacci_number, float):
+        raise ValueError("El número de fibonacci ha d'ésser numèric, però int: " + str(fibonacci_number))
+    if fibonacci_number is None:
+        raise ValueError(f"El número de fibonacci no pot ser None")
+    if fibonacci_number < 0:
+        raise ValueError(f"El número de fibonacci no pot ser menor de 0: " + str(fibonacci_number))
+
+
+    # comptador inicial per generar la sèrie fins arribar al límit
+    # marcat pel paràmetre fibonacci_number
+    counter=0
+
+    # primers 2 elements generadors de la sèrie
+    templist=[0,1]
+
+    # generen la sèrie, afegint una llista la suma del n-essim element
+    # amb n+1 element
+    while counter <= fibonacci_number:
+        templist.append(templist[counter] + templist[counter+1])
+        counter +=1
+
+    # per comprobació de l'usuari, imprim la llista
+    #print(f"La llista fibonacci generada és: {templist} ")
+    
+    # retornem l'element a la posició marcada per fibonacci_number.
+    return templist[fibonacci_number]
+    
+try:
+    fibonacci(10)
+    #print(fibonacci(1.5))
+    #print(fibonacci(1))
+    #print(fibonacci(2))
+    #print(fibonacci(10))
+    #print(fibonacci("10"))
+    #print(fibonacci(-1))
+    #print(fibonacci(""))
+    #print(fibonacci(None))
+except ValueError as err:
+    print(err)
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script

@@ -41,10 +41,45 @@ Exemple:
 
 '''
 
-def sum_odd_numbers(list_numbers):
-    # Write here your code
-    pass
+def check_type(elem):
+    if isinstance(elem, str):
+        raise ValueError("Trobat un tipus de dada string: " + elem)
+    if isinstance(elem, float):
+        raise ValueError("El número de la llista ha d'ésser numèric, però int: " + str(elem))
+    if elem is None:
+        raise ValueError(f"El número de la llista no pot ser None")
+    # comprovem que elem siguin enters més grans de 0
+    if elem < 0:
+        raise ValueError("Trobat un número negatiu: " + str(elem))
 
+def sum_odd_numbers(list_numbers):
+    # variable per guardar el total acumulat
+    total=0
+
+    # seguim tota la llista element a element
+    for elem in list_numbers:
+        # gestió de tipus de dada passat
+        check_type(elem)
+
+        # element senar
+        if elem % 2 != 0:
+            total=total + elem
+    return total
+
+try:
+    #print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
+    #print(sum_odd_numbers([0, 2, 3, 4, 5, 10, 21, 100]))
+    #print(sum_odd_numbers([-1, 2, 3, 4, 5, 10, 21, 100]))
+    #print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 1.5]))
+    #print(sum_odd_numbers(["1", 2, 3, 4, 5, 10, 21, 1.5]))
+    #print(sum_odd_numbers([None, 2, 3, 4, 5, 10, 21, 1.5]))
+    #print(sum_odd_numbers([]))
+    print(sum_odd_numbers([2,4,6,8,10]))
+    print(sum_odd_numbers([1,2,3,4,5]))
+    print(sum_odd_numbers([1,3,5,7,9]))
+except ValueError as err:
+    print(err)
+    
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 # print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
