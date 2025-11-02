@@ -33,9 +33,29 @@ Exemple:
 
 '''
 
-def count_vowels(text_chain:str):
-    # Write here your code
-    pass
+def count_vowels(text_chain):
+    # array amb les vocals per ser comptades
+    vowels=['a','e','i','o','u','A','E','I','O','U',]    
+    vowels_counter=0
+
+    for elem in text_chain:
+        if elem in vowels:
+            # augmentem el comptador de vocals
+            vowels_counter +=1
+    
+    return vowels_counter
+
+print(count_vowels('Hello world, this is an example.'))
+print(count_vowels('.....'))
+print(count_vowels('AEIOU'))
+print(count_vowels('Hola'))
+print(count_vowels('Python'))
+print(count_vowels('AEIOU'))
+print(count_vowels('AeioU'))
+print(count_vowels(''))
+print(count_vowels(' '))
+print(count_vowels('3344a'))
+
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
