@@ -64,10 +64,14 @@ Exemple:
 
 import numpy as np
 
+
 def results(list_numbers):
-    # Write here your code
+    mitjana = round(np.mean(list_numbers), 2)
+    desviacio = round(np.std(list_numbers), 2)
+
+    return print(f"Average = {mitjana} \nStandard deviation {desviacio}")
     pass
 
-# Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
+# Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 # results([1, 2, 10, -5, 0, 9.55, 74.825, 55, 8, 42])

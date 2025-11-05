@@ -39,10 +39,22 @@ Exemple:
 
 '''
 
+
 def fibonacci(fibonacci_number):
-    # Write here your code
+    if fibonacci_number < 0 or not isinstance(fibonacci_number, int):
+        raise ValueError("Aquest numero no es correcte")
+
+    if fibonacci_number == 0 or fibonacci_number == 1:
+        return 1
+    else:
+        num1 = 1
+        num2 = 1
+        for num in range(2, fibonacci_number + 1):
+
+            num1, num2 = num2, num1 + num2
+        return num1
     pass
 
-# Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
+# Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 # print(fibonacci(10))

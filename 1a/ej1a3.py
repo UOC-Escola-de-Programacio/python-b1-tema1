@@ -31,10 +31,15 @@ Exemple:
 
 '''
 
-def invert_text(text_chain:str):
-    # Write here your code
+
+def invert_text(text_chain: str):
+    invertida = ""
+    for lletres in text_chain:
+        invertida = text_chain[::-1]
+
+    return invertida
     pass
 
-# Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
+# Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 # print(invert_text("Hello world!"))
