@@ -41,8 +41,20 @@ Exemple:
 
 def fibonacci(fibonacci_number):
     # Write here your code
-    pass
+    try:        
+        if fibonacci_number < 0:
+            raise ValueError
+        
+        a = 0
+        b = 1
+
+        for i in range(fibonacci_number):
+            a, b = b, a + b
+
+        return a
+    except:
+        raise ValueError("El valor introducido no es valido.")
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(fibonacci(10))
+# print(fibonacci("a"))

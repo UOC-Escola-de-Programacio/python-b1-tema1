@@ -43,8 +43,23 @@ Exemple:
 
 def sum_odd_numbers(list_numbers):
     # Write here your code
-    pass
+    try:
+        result = 0
+        for i in list_numbers:
+            if i < 0:
+                raise ValueError
+            elif isinstance(i, int) == False:
+                raise ValueError
+            elif i % 2 == 1:
+                result += i
+        return result
+    except:
+        raise ValueError("MISSATGE D'ERROR")
+
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
+try:
+    print(sum_odd_numbers([1.5, 2, 3, 4, 5]))
+except ValueError as ve:
+    print(ve)
