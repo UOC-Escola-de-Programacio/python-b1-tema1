@@ -34,10 +34,11 @@ Exemple:
     87
 """
 
+
 def obtain_max(list_numbers):
-    # Write here your code
+    return max(list_numbers)
     pass
 
-# Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
+# Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 # print(obtain_max([1, 45, 87, 21, 0, 23, 28]))
