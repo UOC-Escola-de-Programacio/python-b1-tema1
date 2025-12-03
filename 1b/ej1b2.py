@@ -66,8 +66,13 @@ Exemple:
 import math
 
 def calculate_angle(angle):
-    # Write here your code
+    assert calculate_angle (0) == 0,"The calculate_angle for 0, does not return the correct value.It should be 0"
+    assert calculate_angle (90) == 1, "The calculate angle for 90, does not return the correct value. It should be 1"
+    assert math.isclose (calculate_angle(180), 0,rel_tol=0.01) "The calculate angle for 180, does not return the correct value. It should be 0"
+    assert math.isclose (calculate_angle(270), -1,rel_tol=0.01) "The calculate angle for 270, does not return the correct value. It should be -1"
+    assert math.isclose (calculate_angle (45), 0.71,rel_tol=0.01) "The calculate angle for 45, does not retrun the correct value. It should be 0.71"
     pass
+   
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
