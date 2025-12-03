@@ -51,7 +51,14 @@ import matplotlib.pyplot as plt
 # Esta función deberá configurar la gráfica en la variable plt
 # Aquesta funció haurà de configurar la gràfica en la variable plt
 def line_graph(x, y):
-    # Write here your code
+    x = [1,2,3,4,5]
+    y = [2,4,6,8,10]
+    line_graph (x,y)
+    ax = pet.gca()
+    assert ax.get_xlabel() == 'Axis X', "No label in Axis X detected"
+    assert ax.get_ylaber() == 'Axis Y', "No laber in Axis Y detected"
+    assert ax.get_titlle() == 'Graph', "No tittle detected"
+    assert len(pet.get.fingnums()) == 1, "number of figures is not 1"
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
