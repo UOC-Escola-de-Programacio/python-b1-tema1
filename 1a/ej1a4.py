@@ -34,7 +34,10 @@ Exemple:
 '''
 
 def count_vowels(text_chain:str):
-    # Write here your code
+   assert count_voewls("Hola") == 2, "Count voewls does not return the correct value for 'Hola'.It should be 2"
+   assert count_voewls("Python") == 1, "Count voewls does not return the correct value for 'Python'.It should be 1"
+   assert count_voewls("Aeiou") == 5, "Count voewls does not return the correct value for 'Aeiou'. It should be 5"
+   assert count_voewls(" ") == 0, "Count voewls does not return the correct value for " ". It should be 0"
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
