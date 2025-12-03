@@ -40,7 +40,18 @@ Exemple:
 '''
 
 def fibonacci(fibonacci_number):
-    # Write here your code
+assert fibonacci(0) == 0,
+assert fibonacci(1) == 1, 
+assert fibonacci(6) == 8,
+assert fibonacci (10) == 55,
+def(test)_fibonacci_invalid_imput():
+with pytest.raises(ValueError):
+    fibonacci(-1)
+with pytest.raises(ValueError):
+    fibonacci(1.5)
+with pytest.raises(ValueError):
+    fibonacci("5")
+    
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
