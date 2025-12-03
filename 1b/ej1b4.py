@@ -65,7 +65,17 @@ Exemple:
 import numpy as np
 
 def results(list_numbers):
-    # Write here your code
+   def results(list_numbers):
+#primer test
+    numbers = [1,2,3,4,5]
+    ave, standard = results(numbers)
+    assert round(ave,2) == 3.0, "The result does not return the correct average for input [1, 2, 3, 4, 5]. It should be 3.0"
+    assert round(standard,2) == 1.41, "The result does not return the correct standard for input [1, 2, 3, 4, 5]. It should be 1.41" 
+#segundo test 
+    numbers = [10,20,30,40,50]
+    ave, standard = results(numbers)
+    assert round(ave,2) == 30, "The result does not return the correct average for input [10, 20, 30, 40, 50]. It should be 30"
+    assert round(standard,2) == 14.14, "The result does not return the correct average for input [10, 20, 30, 40, 50]. It should be 14.14"
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
