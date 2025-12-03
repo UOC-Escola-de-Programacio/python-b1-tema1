@@ -38,7 +38,9 @@ Exemple:
 
 
 def find_max(lst):
-    # Write here your code
+  assert find_max([1, 2, 3, 4, 5]) == 5, "find max does not return the correct value for input [1, 2, 3, 4, 5]. It should be 5"
+  assert find_max([100, 2, 3, 4, 5]) == 100, "find max does not return the correct value for input [100, 2, 3, 4, 5,]. It should be 100"
+  assert find_max([3, 1000, 5]) == 1000, "find max does not return the correct value for input [3, 1000, 5]. It should be 1000"
     pass
 
 
