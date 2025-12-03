@@ -42,7 +42,16 @@ Exemple:
 '''
 
 def sum_odd_numbers(list_numbers):
-    # Write here your code
+   assert sum_odd_number([1,2,3,4,5]) == 9,
+   assert sum_odd_number([2,4,6,8,10]) == 0,
+   assert sum_odd_number([1,3,7,9]) == 25,
+with pytest raises(ValueError):
+    sum_odd_number([-1,2,3,4,5])
+with pytest raises(ValueError):
+    sum_odd_number([1,5,2,3,4,5])
+with pytest raises(ValueError):
+    sum_odd_number(['1',2,3,4,5)]
+
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
