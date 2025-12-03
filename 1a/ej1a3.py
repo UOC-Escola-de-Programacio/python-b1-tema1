@@ -32,9 +32,12 @@ Exemple:
 '''
 
 def invert_text(text_chain:str):
-    # Write here your code
+    assert invert_text("Good day") == "yad dooG" "invert_text does not return the correct value for 'Good day'.It shoulb be 'yad dooG'"
+    assert invert_text("python") == "nohtyp" "invert_text does not return the correct value for 'python'.It should be 'nohtyp'"
+    assert invert_text("9 8 7 6 5 4 3 2 1") == "1 2 3 4 5 6 7 8 9" "invert_text does not return the correct value for '9 8 7 6 5 4 3 2 1'. It should be '1 2 3 4 5 6 7 8 9'"
+    assert invert_text(" ") == " " "invert_text does not return the correct value for " ".It should be '""
     pass
-
+"invert_text does not return the correct value for 'Good day'. It should be 'yad dooG'"
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 # print(invert_text("Hello world!"))
